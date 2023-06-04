@@ -10,7 +10,7 @@ const galeryMarkup = galleryItems.map((image) => {
     const { preview, original, description } = image;
     return `
         <li class="gallery__item">
-            <a class="gallery__link"${original}">
+            <a class="gallery__link" href="${original}">
                 <img
                     class="gallery__image"
                     src="${preview}"
