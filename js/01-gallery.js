@@ -35,12 +35,12 @@ function onClick(evt) {
         }
     });
     currentBasicLightbox.show();
-    document.addEventListener('keydown', onEscPressed);
+    document.addEventListener('keydown', onEscPressed.bind(currentBasicLightbox));
 }
 
 function onEscPressed(evt) {
     if (evt.code === "Escape") {
-        currentBasicLightbox.close();
+        this.close();
     }
 };
 // console.log(galleryItems);
